@@ -1,40 +1,107 @@
 <!DOCTYPE html>
-<html><div class="contenedor-formulario">
-  <div class="wrap">
-    <form action="" class="formulario" name="formulario_registro" method="get">
-      <div>
-        <div class="input-group">
-          <input type="text" id="nombre" name="nombre">
-          <label class="label" for="nombre">Nombre:</label>
-        </div>
-        <div class="input-group">
-          <input type="email" id="correo" name="correo">
-          <label class="label" for="correo">Correo:</label>
-        </div>
-        <div class="input-group">
-          <input type="password" id="pass" name="pass">
-          <label class="label" for="pass">Contraseña:</label>
-        </div>
-        <div class="input-group">
-          <input type="password" id="pass2" name="pass2">
-          <label class="label" for="pass2">Repetir Contraseña:</label>
-        </div>
-        <div class="input-group radio">
-          <input type="radio" name="sexo" id="hombre" value="Hombre">
-          <label for="hombre">Hombre</label>
-          <input type="radio" name="sexo" id="mujer" value="Mujer">
-          <label for="mujer">Mujer</label>
-        </div>
-        <div class="input-group checkbox">
-          <input type="checkbox" name="terminos" id="terminos" value="true">
-          <label for="terminos">Acepto los Terminos y Condiciones</label>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exemplo de formulário</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
 
-        <input type="submit" id="btn-submit" value="Enviar">
+  <header>
+    <h1>Pesquisa sobre jogos eletrônicos.</h1>
+    <h2>Informe-nos sobre suas preferências relativas a este tema em específico.</h2>
+  </header>
+  <form action="http://www.google.com" method="post">
+  <section>
+    <div>
+      <h3>Sobre você</h3>
+      <label for="nome">Insira seu nome completo:</label>
+      <input name="nome" type="text" placeholder="Digite aqui seu nome">
+      <label for="idade">Quanto anos você tem?</label>
+      <input name="idade" type="number" min="5" max="110" value="18">
+      <label for="email">Informe um e-mail para enviarmos SPAM pra você:</label>
+      <input name="email" type="email" placeholder="Digite seu email">
+      <label for="senha">Digite a senha desse e-mail para conferirmos se o SPAM tá chegando:</label>
+      <input name="senha" type="password" placeholder="Digite sua senha">
+    </div>
+    <div>
+      <h3>Suas preferências de entretenimento</h3>
+      <label for="plataforma">Qual a plataforma que você mais usa para jogar</label>
+      <select name="plataforma">
+        <option value="">Escolha...</option>
+        <option value="ps">Sony PlayStation</option>
+        <option value="ms">Microsoft XBOX</option>
+        <option value="nt">Nintendo</option>
+        <option value="pc">Computador</option>
+        <option value="xd">Smartphone</option>
+      </select>
+      <label for="check-generos">Quais os seus gêneros preferidos?</label>
+      <div id="check-generos">
+        <label for="acao"><input name="acao" type="checkbox">Ação</label>
+        <label for="aventura"><input name="aventura" type="checkbox">Aventura</label>
+        <label for="rpg"><input name="rpg" type="checkbox">RPG</label>
+        <label for="esporte"><input name="esporte" type="checkbox">Esporte</label>
+        <label for="tiro"><input name="tiro" type="checkbox">Tiro</label>
+        <label for="simulacao"><input name="simulacao" type="checkbox">Simulação</label>
+        <label for="estrategia"><input name="estrategia" type="checkbox">Estratégia</label>
+        <label for="plataforma"><input name="plataforma" type="checkbox">Plataforma</label>
+        <label for="luta"><input name="luta" type="checkbox">Luta</label>
+        <label for="casual"><input name="casual" type="checkbox">Casual</label>
       </div>
-    </form>
-  </div>
-</div>
+      <label for="relevancia">Qual a relevância de cada um dos seguintes critérios para a sua experiência:</label>
+      <div id="relevancia">
+        <div>
+          <label class="block" for="h">História:</label>
+          <label class="block" for="g">Gráficos:</label>
+          <label class="block" for="j">Jogabilidade:</label>
+          <label class="block" for="m">Multiplayer:</label>
+          <label class="block" for="d">Diversão</label>
+        </div>
+        <div>
+          <div class="categoria" id="historia">
+            <label><input type="radio" name="h">3</label>
+            <label><input type="radio" name="h">2</label>
+            <label><input type="radio" name="h">1</label>
+            <label><input type="radio" name="h">0</label>
+          </div>
+          <div class="categoria" id="graficos">
+            <label><input type="radio" name="g">3</label>
+            <label><input type="radio" name="g">2</label>
+            <label><input type="radio" name="g">1</label>
+            <label><input type="radio" name="g">0</label>
+          </div>
+          <div class="categoria" id="jogabilidade">
+            <label><input type="radio" name="j">3</label>
+            <label><input type="radio" name="j">2</label>
+            <label><input type="radio" name="j">1</label>
+            <label><input type="radio" name="j">0</label>
+          </div>
+          <div class="categoria" id="multiplayer">
+            <label><input type="radio" name="m">3</label>
+            <label><input type="radio" name="m">2</label>
+            <label><input type="radio" name="m">1</label>
+            <label><input type="radio" name="m">0</label>
+          </div>
+          <div class="categoria" id="diversao">
+              <label><input type="radio" name="d">3</label>
+              <label><input type="radio" name="d">2</label>
+              <label><input type="radio" name="d">1</label>
+              <label><input type="radio" name="d">0</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button type="submit">Enviar resposta</button>
+    </div>
+  </section>
+  </form>
+
+</html>
+
+
  
 	
 
